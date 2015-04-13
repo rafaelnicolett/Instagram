@@ -1,22 +1,124 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem Vindo ao Instagram!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReD-j4-Ed2">
+                                <rect key="frame" x="16" y="39" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XDp-LW-jrR"/>
+                                    <constraint firstAttribute="width" constant="343" id="bnA-nD-Alv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use o formulario abaixo para registrar-se" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uU-g5-dwC">
+                                <rect key="frame" x="16" y="77" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="M3h-ZM-Cbk"/>
+                                    <constraint firstAttribute="height" constant="21" id="vDo-jK-W8F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rafael" borderStyle="roundedRect" placeholder="Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWC-OD-S1F">
+                                <rect key="frame" x="94" y="129" width="186" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="bym-2D-BRJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="ogF-ez-2vX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZoH-cg-7Qg">
+                                <rect key="frame" x="94" y="180" width="186" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZCy-iy-xAc"/>
+                                    <constraint firstAttribute="width" constant="186" id="vME-DH-dLQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWW-Jo-rff">
+                                <rect key="frame" x="94" y="256" width="186" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JW8-z5-90g"/>
+                                    <constraint firstAttribute="width" constant="186" id="bdM-P2-CTq"/>
+                                </constraints>
+                                <state key="normal" title="Inscreva-se">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="singUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wIG-0H-dOe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ja possui registro?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qs-nb-mBa">
+                                <rect key="frame" x="94" y="311" width="186" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="LPh-MU-pyv"/>
+                                    <constraint firstAttribute="height" constant="16" id="MNB-td-UiR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDD-3c-2KS">
+                                <rect key="frame" x="94" y="335" width="186" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="8Wj-8p-qyT"/>
+                                    <constraint firstAttribute="height" constant="30" id="A8O-wd-4Ap"/>
+                                </constraints>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toogleSingUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jyp-xX-WeL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZoH-cg-7Qg" firstAttribute="top" secondItem="pWC-OD-S1F" secondAttribute="bottom" constant="21" id="070-rK-dif"/>
+                            <constraint firstAttribute="centerX" secondItem="EWW-Jo-rff" secondAttribute="centerX" id="5LO-bB-ZcS"/>
+                            <constraint firstAttribute="centerX" secondItem="ReD-j4-Ed2" secondAttribute="centerX" id="8Ht-8f-Yle"/>
+                            <constraint firstAttribute="centerX" secondItem="9Qs-nb-mBa" secondAttribute="centerX" id="GpO-ra-JMC"/>
+                            <constraint firstAttribute="centerX" secondItem="0uU-g5-dwC" secondAttribute="centerX" id="KUo-e6-P5Z"/>
+                            <constraint firstAttribute="centerX" secondItem="ZoH-cg-7Qg" secondAttribute="centerX" id="Ogh-vk-ZAr"/>
+                            <constraint firstItem="9Qs-nb-mBa" firstAttribute="top" secondItem="EWW-Jo-rff" secondAttribute="bottom" constant="15" id="RbK-95-hEE"/>
+                            <constraint firstItem="0uU-g5-dwC" firstAttribute="top" secondItem="ReD-j4-Ed2" secondAttribute="bottom" constant="8" id="WFk-XB-khU"/>
+                            <constraint firstItem="EWW-Jo-rff" firstAttribute="top" secondItem="ZoH-cg-7Qg" secondAttribute="bottom" constant="46" id="ceK-ek-rZJ"/>
+                            <constraint firstItem="pWC-OD-S1F" firstAttribute="top" secondItem="0uU-g5-dwC" secondAttribute="bottom" constant="31" id="dd9-iL-RUJ"/>
+                            <constraint firstItem="ReD-j4-Ed2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="19" id="hBF-eP-Icj"/>
+                            <constraint firstItem="ZDD-3c-2KS" firstAttribute="top" secondItem="9Qs-nb-mBa" secondAttribute="bottom" constant="8" id="noa-wv-0sn"/>
+                            <constraint firstAttribute="centerX" secondItem="pWC-OD-S1F" secondAttribute="centerX" id="sOc-h4-v9F"/>
+                            <constraint firstAttribute="centerX" secondItem="ZDD-3c-2KS" secondAttribute="centerX" id="xwD-Tg-xlD"/>
+                            <constraint firstItem="9Qs-nb-mBa" firstAttribute="top" secondItem="EWW-Jo-rff" secondAttribute="bottom" constant="8" id="zes-e1-3qA"/>
+                        </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="alredyRegistered" destination="9Qs-nb-mBa" id="dmU-qx-NsC"/>
+                        <outlet property="password" destination="ZoH-cg-7Qg" id="iKu-s8-Df3"/>
+                        <outlet property="singupButton" destination="EWW-Jo-rff" id="FXo-Sn-xXw"/>
+                        <outlet property="singupToogleButton" destination="ZDD-3c-2KS" id="WQ6-lX-ZKl"/>
+                        <outlet property="username" destination="pWC-OD-S1F" id="hBN-em-QHl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
